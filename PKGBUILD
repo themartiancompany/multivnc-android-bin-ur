@@ -140,7 +140,7 @@ elif [[ "${_git}" == false ]]; then
       sha256sums+=(
         "SKIP"
       )
-      _sum="f137958392a800fca583bfc00f191b8edb29b77c705fddf27dffb6c26ca5d413"
+      _sum="6c3fb340740c9b3443b190770615feea6e97e9f52b83f64ab770f4becf0d228f"
     fi
   elif [[ "${_github}" == "true" ]]; then
     _url="${_github_url}"
