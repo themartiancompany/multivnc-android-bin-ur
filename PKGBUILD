@@ -24,8 +24,8 @@
 # Maintainer: Pellegrino Prevete (dvorak) <pellegrinoprevete@gmail.com>
 # Maintainer: Pellegrino Prevete (dvorak) <dvorak@0x87003Bd6C074C713783df04f36517451fF34CBEf>
 
-_fdroid="false"
-_github="true"
+_fdroid="true"
+_github="false"
 _system_install="false"
 _user_install="true"
 if [[ "${_system_install}" == "true" ]]; then
@@ -36,25 +36,27 @@ fi
 _offline="false"
 _git="false"
 _proj="hip"
-_pkg="termux"
-_component="widget"
-_pkgbase="${_pkg}-${_component}"
+_pkg=multivnc
+_variant="android"
+_pkgbase="${_pkg}-android"
 _pkgname="${_pkgbase}"
-_app_id="com.${_pkg}.${_component}"
-_Pkg="Termux-Widget"
+_app_domain="coboltforge"
+_app_subdomain="dontmind"
+_app_id="com.${_app_domain}.${_app_subdomain}.${_pkg}"
+_Pkg="MultiVNC"
 pkgname=(
   "${_pkgname}-bin"
 )
-pkgver=0.14.0
+pkgver=2.1.8
 # _commit="e117ccae32d5a7d75479b61f034000122fe9fa24"
-_fdroid_pkgrel=1000
+_fdroid_pkgrel=101
 pkgrel=1
 if [[ "${_fdroid}" == "true" ]]; then
   pkgrel="${_fdroid_pkgrel}"
 fi
 _pkgdesc=(
-  "Termux add-on app which adds"
-  "shortcuts to commands on the home screen."
+  "Open-source VNC viewer that aims"
+  "to be easy to use and fast."
 )
 pkgdesc="${_pkgdesc[*]}"
 arch=(
@@ -193,4 +195,3 @@ package() {
 }
 
 # vim: ft=sh syn=sh et
-sha256sums=('00c9ae0d7010267cf258204432feb92ab60198c88a4accaa80a8651946b8a7e7')
