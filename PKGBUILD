@@ -114,8 +114,8 @@ _ns="${_pkg}"
 _github_url="${_http}/${_ns}/${_pkgname}"
 # _tag="${pkgrel}"
 _tag="${pkgver}"
-# _tag_name="pkgrel"
-_tag_name="pkgver"
+_tag_name="pkgrel"
+# _tag_name="pkgver"
 _tarname="${_pkgname}-${pkgver}-${pkgrel}"
 [[ "${_offline}" == "true" ]] && \
   _url="file://${HOME}/${pkgname}"
@@ -131,8 +131,8 @@ elif [[ "${_git}" == false ]]; then
   if [[ "${_fdroid}" == "true" ]]; then
     _url="${_fdroid_url}"
     if [[ "${_tag_name}" == 'pkgrel' ]]; then
-      _src="${_tarname}.apk::${_url}/${_pkg}_${pkgrel}.apk"
-      _sig="${_tarname}.apk.sig::${_url}/${_pkg}_${pkgrel}.apk.asc"
+      _src="${_tarname}.apk::${_url}/${_app_id}_${pkgrel}.apk"
+      _sig="${_tarname}.apk.sig::${_url}/${_app_id}_${pkgrel}.apk.asc"
       source+=(
         "${_sig}"
       )
