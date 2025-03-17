@@ -79,7 +79,7 @@ license=(
   'GPL3'
 )
 depends=(
-  "${_pkg}"
+  # "${_pkg}"
 )
 _os="$( \
   uname \
@@ -102,6 +102,7 @@ checkdepends=(
 )
 provides=(
   "${_pkgname}=${pkgver}"
+  "${_pkg}=${pkgver}"
 )
 conflicts=(
   "${_pkgname}"
